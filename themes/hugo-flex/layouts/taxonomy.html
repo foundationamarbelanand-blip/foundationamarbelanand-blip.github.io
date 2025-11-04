@@ -1,16 +1,8 @@
+
 {{ define "main" }}
-
-  {{ $context := dict "page" . "level" 1 "isdateshown" false }}
-  {{ partial "heading.html" $context }}
-
-  {{ .Content }}
-
-  <ul class="Tags">
-    {{ range .Pages }}
-      <li class="Tags-item u-background">
-        <a class="Tags-link u-clickable" href="{{ .RelPermalink }}">{{ .Title }}</a>
-      </li>
-    {{ end }}
-  </ul>
-
+  {{ if eq .Title "Categories" }}
+    <meta http-equiv="refresh" content="0; url='{{ "/" | relURL }}'" />
+  {{ else }}
+    {{ .Content }}
+  {{ end }}
 {{ end }}

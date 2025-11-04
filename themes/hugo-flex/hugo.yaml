@@ -3,6 +3,13 @@ title: My New Hugo Site
 languageCode: en-US
 theme: hugo-flex
 
+disableKinds:
+  - taxonomy
+  - term
+  - RSS
+taxonomies:
+  tag: "tags"
+  
 params:
   color: #FFFFFF          # Any color in CSS syntax
   width: 42rem          # Any length in CSS syntax / leave empty to span page
@@ -52,23 +59,29 @@ markup:
 
 menu:
   main:
-    - name: About
-      pageRef: /about
+    - name: Home
+      url: /
       weight: 1
-    - name: Posts
-      pageRef: /post
+
+    - name: About
+      url: /about/
       weight: 2
-    - name: Tags
-      pageRef: /tags
+      
+    - name: Projects
+      url: /projects/
       weight: 3
-    - name: Categories
-      pageRef: /categories
+
+    - name: Collaboration
+      url: /collaboration/
       weight: 4
-    - name: RSS
-      pageRef: /
+
+    - name: Media
+      url: /media/
       weight: 5
-      params:
-        - format: rss
+
+    - name: Contact Us
+      url: /contact-us/
+      weight: 6
 
 outputFormats:
   rss:
