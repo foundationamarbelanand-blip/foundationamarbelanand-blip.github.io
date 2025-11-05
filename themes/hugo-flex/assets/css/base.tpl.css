@@ -515,7 +515,7 @@ color: #282828;
 
 .hero {
    /* Desktop default */
-  background-image: url('/image/banner.webp');
+  background-image: url('/Image/banner.webp');
   
   height: 590px;
   background-size: cover;
