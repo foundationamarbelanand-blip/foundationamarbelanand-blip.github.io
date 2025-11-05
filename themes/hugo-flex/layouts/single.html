@@ -1,19 +1,19 @@
 {{ define "main" }}
-<style>.single-container {
-  max-width: 1360px;
-  margin: 0 auto;
-  margin-top: 30px;
-  padding: 20px; /* optional for spacing */
-  background-color: #EFF2F7;
-  border-radius: 30px;
-}
+<style>
+  .single-container {
+    max-width: 1360px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 40px; /* optional for spacing */
+    background-color: #eff2f7;
+    border-radius: 30px;
+  }
 </style>
-  <div class="single-container">
-      {{ $context := dict "page" . "level" 1 "isdateshown" false }}
-      {{ partial "heading.html" $context }}
-      {{ .Content }}
-      {{ partial "tags.html" . }}
-      {{ partial "comments.html" . }}
-    </div>
+<div class="single-container">
+  {{ $context := dict "page" . "level" 1 "isdateshown" false }} {{ partial
+  "heading.html" $context }} {{ .Content }} {{ partial "tags.html" . }} {{
+  partial "comments.html" . }}
+</div>
 
 {{ end }}

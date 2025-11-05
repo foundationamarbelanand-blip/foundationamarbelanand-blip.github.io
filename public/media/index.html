@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   
   <meta charset="utf-8">
 
@@ -25,7 +25,7 @@
 
 <meta name="generator" content="Hugo 0.152.1">
   <title>Media | My New Hugo Site</title>
-  <link href="https://foundationamarbelanand-blip.github.io/media/" rel="canonical">
+  <link href="http://localhost:1313/media/" rel="canonical">
 
 
 
@@ -43,7 +43,7 @@
     
   
   
-      <link href="/css/base.min.ee78941815afd9c1e5f2bcd40186ac35cf319046db9c07b2a2a47d7655e1882c.css" rel="stylesheet" integrity="sha256-7niUGBWv2cHl8rzUAYasNc8xkEbbnAeyoqR9dlXhiCw=" crossorigin="anonymous">
+    <link href="/css/base.css" rel="stylesheet">
 
 
 
@@ -57,22 +57,27 @@
         
         <div
           class="top-item"
-          style="display: flex; align-items: center; gap: 5px ;"
+          style="display: flex; align-items: center; gap: 5px"
         >
           <svg
-             class="icon-home"
-             xmlns="http://www.w3.org/2000/svg           "
-             viewBox="0 0 640 640"
-             width="20"
-             height="20"
-             fill="currentColor"><path d="M341.8 72.6C329.5 61.2 310.5 61.2 298.3 72.6L74.3 280.6C64.7 289.6 61.5 303.5 66.3 315.7C71.1 327.9 82.8 336 96 336H112V512C112 547.3 140.7 576 176 576H464C499.3 576 528 547.3 528 512V336H544C557.2 336 569 327.9 573.8 315.7C578.6 303.5 575.4 289.5 565.8 280.6L341.8 72.6zM304 384H336C362.5 384 384 405.5 384 432V528H256V432C256 405.5 277.5 384 304 384z"/></svg>
+            class="icon-home"
+            xmlns="http://www.w3.org/2000/svg           "
+            viewBox="0 0 640 640"
+            width="20"
+            height="20"
+            fill="currentColor"
+          >
+            <path
+              d="M341.8 72.6C329.5 61.2 310.5 61.2 298.3 72.6L74.3 280.6C64.7 289.6 61.5 303.5 66.3 315.7C71.1 327.9 82.8 336 96 336H112V512C112 547.3 140.7 576 176 576H464C499.3 576 528 547.3 528 512V336H544C557.2 336 569 327.9 573.8 315.7C578.6 303.5 575.4 289.5 565.8 280.6L341.8 72.6zM304 384H336C362.5 384 384 405.5 384 432V528H256V432C256 405.5 277.5 384 304 384z"
+            />
+          </svg>
         </div>
         
         <div
           class="top-item"
-          style="display: flex; align-items: center; gap: 5px ;"
+          style="display: flex; align-items: center; gap: 5px"
         >
-          <svg 
+          <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 640 640"
             width="20"
@@ -89,7 +94,7 @@
           class="top-item"
           style="display: flex; align-items: center; gap: 5px"
         >
-          <svg 
+          <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 640 640"
             width="20"
@@ -164,11 +169,10 @@
 
     <div class="nav-bar">
       <div class="nav-bar-left">
-        <img src="/Image/l2.png" alt="My Website Logo" class="Banner-logo" />
+        <img src="/Image/l2s.png" alt="My Website Logo" class="Banner-logo" />
       </div>
       <div class="nav-bar-med">
-        
-<ul class="Banner">
+        <ul class="Banner">
             
           <li class="Banner-item">
             <a class="Banner-link u-clickable" href="/">Home</a>
@@ -195,8 +199,6 @@
           </li>
           
         </ul>
-
-
       </div>
     </div>
   </div>
@@ -209,135 +211,124 @@
     <button id="closeBtn" class="close-toggle" onclick="toggleMenu()">×</button>
 
     <div id="mobileMenu" class="mobile-menu">
-
-      
-      
+         
+      <div
+        class="mobile-item "
+        onclick="toggleMobileSubmenu(event, this)"
+      >
         
+        <a
+          href="/"
+          class="parent-link"
+          
+        >
+          Home 
+        </a>
+         
+      </div>
         
-        <div 
-          class="mobile-item " 
-          onclick="toggleMobileSubmenu(event, this)">
-          
-          
-            <a href="/" class="parent-link" >
-              Home 
-              
-            </a>
-          
-
-          
-        </div>
-      
+      <div
+        class="mobile-item "
+        onclick="toggleMobileSubmenu(event, this)"
+      >
         
+        <a
+          href="/about/"
+          class="parent-link"
+          
+        >
+          About 
+        </a>
+         
+      </div>
         
-        <div 
-          class="mobile-item " 
-          onclick="toggleMobileSubmenu(event, this)">
-          
-          
-            <a href="/about/" class="parent-link" >
-              About 
-              
-            </a>
-          
-
-          
-        </div>
-      
+      <div
+        class="mobile-item "
+        onclick="toggleMobileSubmenu(event, this)"
+      >
         
+        <a
+          href="/projects/"
+          class="parent-link"
+          
+        >
+          Projects 
+        </a>
+         
+      </div>
         
-        <div 
-          class="mobile-item " 
-          onclick="toggleMobileSubmenu(event, this)">
-          
-          
-            <a href="/projects/" class="parent-link" >
-              Projects 
-              
-            </a>
-          
-
-          
-        </div>
-      
+      <div
+        class="mobile-item "
+        onclick="toggleMobileSubmenu(event, this)"
+      >
         
+        <a
+          href="/collaboration/"
+          class="parent-link"
+          
+        >
+          Collaboration 
+        </a>
+         
+      </div>
         
-        <div 
-          class="mobile-item " 
-          onclick="toggleMobileSubmenu(event, this)">
-          
-          
-            <a href="/collaboration/" class="parent-link" >
-              Collaboration 
-              
-            </a>
-          
-
-          
-        </div>
-      
+      <div
+        class="mobile-item "
+        onclick="toggleMobileSubmenu(event, this)"
+      >
         
+        <a
+          href="/media/"
+          class="parent-link"
+          
+        >
+          Media 
+        </a>
+         
+      </div>
         
-        <div 
-          class="mobile-item " 
-          onclick="toggleMobileSubmenu(event, this)">
-          
-          
-            <a href="/media/" class="parent-link" >
-              Media 
-              
-            </a>
-          
-
-          
-        </div>
-      
+      <div
+        class="mobile-item "
+        onclick="toggleMobileSubmenu(event, this)"
+      >
         
-        
-        <div 
-          class="mobile-item " 
-          onclick="toggleMobileSubmenu(event, this)">
+        <a
+          href="/contact-us/"
+          class="parent-link"
           
-          
-            <a href="/contact-us/" class="parent-link" >
-              Contact Us 
-              
-            </a>
-          
-
-          
-        </div>
+        >
+          Contact Us 
+        </a>
+         
+      </div>
       
     </div>
   </div>
 </nav>
 
 
-
-
   <main>
     <div class="u-wrapper">
       <div class="u-padding">
         
-<style>.single-container {
-  max-width: 1360px;
-  margin: 0 auto;
-  margin-top: 30px;
-  padding: 20px;  
-  background-color: #EFF2F7;
-  border-radius: 30px;
-}
+<style>
+  .single-container {
+    max-width: 1360px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 40px;  
+    background-color: #eff2f7;
+    border-radius: 30px;
+  }
 </style>
-  <div class="single-container">
-      
-      <header class="Heading">
+<div class="single-container">
+   <header class="Heading">
   <h1 class="Heading-title">
     <a class="Heading-link u-clickable" href="/media/" rel="bookmark">Media</a>
   </h1>
   
-</header>
-      
-      
+</header>  
 
   
 
@@ -346,11 +337,10 @@
 
 
 
-
-      
+ 
   
 
-    </div>
+</div>
 
 
       </div>
@@ -365,31 +355,38 @@
         <h3>Quick Links</h3>
         <ul id="dsg">
           <li class="dsg1"><a href="/">Home</a></li>
-          <li class="ds2"><a href="/about">About Us</a></li>
-          <li><a href="/projects">Projects</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li class="ds2"><a href="/about/">About Us</a></li>
+          <li><a href="/projects/">Projects</a></li>
+          <li><a href="/contact-us/">Contact</a></li>
         </ul>
       </div>
 
       
       <div class="footer-column">
         <h3>Contact Us</h3>
-        <p>123 Street Name, City, Country</p>
-        <p>Phone: <a href="tel:+911234567890">+91 1234567890</a></p>
-        <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+        <p>
+          Amarbelanand Foundation<br />C/o- At Amtyapur, Dist.: Satara,
+          Matyapur,<br />Gove, Satara, Satara- 415015,<br />Maharashtra, India
+        </p>
+        
+        <p>
+          Email:
+          <a href="mailto:amarbelanandfoundation@gmail.com"
+            >amarbelanandfoundation@gmail.com</a
+          >
+        </p>
       </div>
 
       
       <div class="footer-column">
         <h3>Sustainability</h3>
         <p>
-          We are committed to sustainable practices and creating a positive
-          impact on the environment through our projects and operations.
+          We are dedicated to sustainable practices and strive to create a
+          positive environmental impact through our projects and operations.
         </p>
-        <a href="/sustainability" class="btn-footer">Learn More</a>
       </div>
     </div>
-    <div class="u-padding u-noboosting">Except where otherwise noted, content on this site is licensed under a &#32; <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.</div>
+    <div class="u-padding u-noboosting">Copyright © 2025, Amarbelanand Foundation. All rights reserved.</div>
   </div>
 </footer>
 

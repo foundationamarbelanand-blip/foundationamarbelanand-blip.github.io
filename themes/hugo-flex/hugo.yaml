@@ -9,33 +9,31 @@ disableKinds:
   - RSS
 taxonomies:
   tag: "tags"
-  
+
 params:
   color: #FFFFFF          # Any color in CSS syntax
-  width: 42rem          # Any length in CSS syntax / leave empty to span page
-  divider: \2500\2500   # Any string in CSS syntax / leave empty for no divider
-  footer: >-            # HTML spaces (&#32;) are needed before HTML elements
-    Except where otherwise noted, content on this site is licensed under a &#32;
-    <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative
-    Commons Attribution 4.0 International License</a>.
+  width: 42rem # Any length in CSS syntax / leave empty to span page
+  divider: \2500\2500 # Any string in CSS syntax / leave empty for no divider
+  footer: >- # HTML spaces (&#32;) are needed before HTML elements
+    Copyright © 2025, Amarbelanand Foundation. All rights reserved.
   rss: To subscribe to this RSS feed, copy its address and paste it into your
     favorite feed reader.
-  favicon: false        # Set to true to add a link to the favicon.ico
-  noClasses: &nc false  # Set to true to use inline CSS for syntax highlighting
-  katex: 0.16.22        # KaTeX version / leave empty to use the latest version
-  headingoffset: 0      # Change heading levels when rendering markdown
-  linkicons: false      # Set to hover or true to add a link icon to headings
-  summaries: false      # Set to true to show summaries of posts on homepage
-  schema: false         # Set to true to add Schema.org metadata
-  opengraph: false      # Set to true to add Open Graph metadata
-  twittercards: false   # Set to true to add Twitter Cards metadata
+  favicon: false # Set to true to add a link to the favicon.ico
+  noClasses: &nc false # Set to true to use inline CSS for syntax highlighting
+  katex: 0.16.22 # KaTeX version / leave empty to use the latest version
+  headingoffset: 0 # Change heading levels when rendering markdown
+  linkicons: false # Set to hover or true to add a link icon to headings
+  summaries: false # Set to true to show summaries of posts on homepage
+  schema: false # Set to true to add Schema.org metadata
+  opengraph: false # Set to true to add Open Graph metadata
+  twittercards: false # Set to true to add Twitter Cards metadata
   utterances:
-    repo:               # Set to Utterances repo URL to add Utterances comments
-    issueterm:          # Leave empty for the default blog post to issue mapping
-    theme:              # Leave empty to use the adaptive Utterances dark theme
+    repo: # Set to Utterances repo URL to add Utterances comments
+    issueterm: # Leave empty for the default blog post to issue mapping
+    theme: # Leave empty to use the adaptive Utterances dark theme
   netlify:
-    honeypot: false     # Set to true to add honeypot field in contact form
-    recaptcha: false    # Set to true to add recaptcha challenge in contact form
+    honeypot: false # Set to true to add honeypot field in contact form
+    recaptcha: false # Set to true to add recaptcha challenge in contact form
   # css:                # Uncomment to add custom CSS from the assets directory
   #   - css/foo.css
   #   - bar.css
@@ -45,15 +43,15 @@ params:
 
 markup:
   highlight:
-    noClasses: *nc      # Set to same value as params.noClasses
+    noClasses: *nc # Set to same value as params.noClasses
   goldmark:
     extensions:
       passthrough:
-        enable: false   # Set to true to render math in LaTeX notation globally
+        enable: false # Set to true to render math in LaTeX notation globally
         delimiters:
           block:
             - ['\[', '\]']
-            - ['$$', '$$']
+            - ["$$", "$$"]
           inline:
             - ['\(', '\)']
 
@@ -66,7 +64,7 @@ menu:
     - name: About
       url: /about/
       weight: 2
-      
+
     - name: Projects
       url: /projects/
       weight: 3
@@ -86,7 +84,7 @@ menu:
 outputFormats:
   rss:
     mediatype: application/rss+xml
-    baseName: feed      # Rename RSS feed URL from rss.xml to feed.xml
+    baseName: feed # Rename RSS feed URL from rss.xml to feed.xml
 
 mediaTypes:
   font/woff2:

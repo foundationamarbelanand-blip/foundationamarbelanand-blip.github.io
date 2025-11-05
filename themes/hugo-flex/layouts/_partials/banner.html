@@ -5,22 +5,27 @@
         <!-- home-->
         <div
           class="top-item"
-          style="display: flex; align-items: center; gap: 5px ;"
+          style="display: flex; align-items: center; gap: 5px"
         >
           <svg
-             class="icon-home"
-             xmlns="http://www.w3.org/2000/svg           "
-             viewBox="0 0 640 640"
-             width="20"
-             height="20"
-             fill="currentColor"><path d="M341.8 72.6C329.5 61.2 310.5 61.2 298.3 72.6L74.3 280.6C64.7 289.6 61.5 303.5 66.3 315.7C71.1 327.9 82.8 336 96 336H112V512C112 547.3 140.7 576 176 576H464C499.3 576 528 547.3 528 512V336H544C557.2 336 569 327.9 573.8 315.7C578.6 303.5 575.4 289.5 565.8 280.6L341.8 72.6zM304 384H336C362.5 384 384 405.5 384 432V528H256V432C256 405.5 277.5 384 304 384z"/></svg>
+            class="icon-home"
+            xmlns="http://www.w3.org/2000/svg           "
+            viewBox="0 0 640 640"
+            width="20"
+            height="20"
+            fill="currentColor"
+          >
+            <path
+              d="M341.8 72.6C329.5 61.2 310.5 61.2 298.3 72.6L74.3 280.6C64.7 289.6 61.5 303.5 66.3 315.7C71.1 327.9 82.8 336 96 336H112V512C112 547.3 140.7 576 176 576H464C499.3 576 528 547.3 528 512V336H544C557.2 336 569 327.9 573.8 315.7C578.6 303.5 575.4 289.5 565.8 280.6L341.8 72.6zM304 384H336C362.5 384 384 405.5 384 432V528H256V432C256 405.5 277.5 384 304 384z"
+            />
+          </svg>
         </div>
         <!-- Email -->
         <div
           class="top-item"
-          style="display: flex; align-items: center; gap: 5px ;"
+          style="display: flex; align-items: center; gap: 5px"
         >
-          <svg 
+          <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 640 640"
             width="20"
@@ -37,7 +42,7 @@
           class="top-item"
           style="display: flex; align-items: center; gap: 5px"
         >
-          <svg 
+          <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 640 640"
             width="20"
@@ -112,11 +117,10 @@
 
     <div class="nav-bar">
       <div class="nav-bar-left">
-        <img src="/Image/l2.png" alt="My Website Logo" class="Banner-logo" />
+        <img src="/Image/l2s.png" alt="My Website Logo" class="Banner-logo" />
       </div>
       <div class="nav-bar-med">
-        
-<ul class="Banner">
+        <ul class="Banner">
           {{ range site.Menus.main }} {{ $url := relLangURL .URL }} {{ if isset
           .Params "format" | and .Page }} {{ $url = (.Page.OutputFormats.Get
           .Params.format).RelPermalink }} {{ end }}
@@ -125,8 +129,6 @@
           </li>
           {{ end }}
         </ul>
-
-
       </div>
     </div>
   </div>
@@ -139,43 +141,56 @@
     <button id="closeBtn" class="close-toggle" onclick="toggleMenu()">×</button>
 
     <div id="mobileMenu" class="mobile-menu">
-
-      {{ $currentPage := . }}
-      {{ range site.Menus.main }}
-        {{ $url := relLangURL .URL }}
-        {{ if and (isset .Params "format") .Page }}
-          {{ $url = (.Page.OutputFormats.Get .Params.format).RelPermalink }}
-        {{ end }}
-        <div 
-          class="mobile-item {{ if .HasChildren }}has-submenu{{ end }}" 
-          onclick="toggleMobileSubmenu(event, this)">
-          
-          {{ if .URL }}
-            <a href="{{ $url }}" class="parent-link" {{ with .Params.target }}target="{{ . }}" rel="noopener noreferrer"{{ end }}>
-              {{ .Name }} 
-              {{ if .HasChildren }}<span class="submenu-toggle">▼</span>{{ end }}
-            </a>
-          {{ else }}
-            <span class="parent-link">
-              {{ .Name }} 
-              {{ if .HasChildren }}<span class="submenu-toggle">▼</span>{{ end }}
-            </span>
-          {{ end }}
-
-          {{ if .HasChildren }}
-            <div class="mobile-submenu">
-              {{ range .Children }}
-                <a href="{{ .URL | relLangURL }}" {{ with .Params.target }}target="{{ . }}" rel="noopener noreferrer"{{ end }}>
-                  {{ .Name }}
-                </a>
-              {{ end }}
-            </div>
+      {{ $currentPage := . }} {{ range site.Menus.main }} {{ $url := relLangURL
+      .URL }} {{ if and (isset .Params "format") .Page }} {{ $url =
+      (.Page.OutputFormats.Get .Params.format).RelPermalink }} {{ end }}
+      <div
+        class="mobile-item {{ if .HasChildren }}has-submenu{{ end }}"
+        onclick="toggleMobileSubmenu(event, this)"
+      >
+        {{ if .URL }}
+        <a
+          href="{{ $url }}"
+          class="parent-link"
+          {{
+          with
+          .Params.target
+          }}target="{{ . }}"
+          rel="noopener noreferrer"
+          {{
+          end
+          }}
+        >
+          {{ .Name }} {{ if .HasChildren }}<span class="submenu-toggle">▼</span
+          >{{ end }}
+        </a>
+        {{ else }}
+        <span class="parent-link">
+          {{ .Name }} {{ if .HasChildren }}<span class="submenu-toggle">▼</span
+          >{{ end }}
+        </span>
+        {{ end }} {{ if .HasChildren }}
+        <div class="mobile-submenu">
+          {{ range .Children }}
+          <a
+            href="{{ .URL | relLangURL }}"
+            {{
+            with
+            .Params.target
+            }}target="{{ . }}"
+            rel="noopener noreferrer"
+            {{
+            end
+            }}
+          >
+            {{ .Name }}
+          </a>
           {{ end }}
         </div>
+        {{ end }}
+      </div>
       {{ end }}
     </div>
   </div>
 </nav>
 <!-- Mobile Navbar end -->
-
-
