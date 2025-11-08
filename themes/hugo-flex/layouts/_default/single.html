@@ -3,12 +3,23 @@
   .single-container {
     max-width: 1360px;
     margin: 0 auto;
+    width: 100%;
     margin-top: 30px;
     margin-bottom: 30px;
     padding: 40px; /* optional for spacing */
     background-color: #eff2f7;
     border-radius: 30px;
   }
+  @media (min-width: 768px) and (max-width: 1208px) {
+    .single-container {
+      padding: 20px;
+    }
+  } /* optional for spacing */
+  @media (max-width: 768px) {
+    .single-container {
+      padding: 20px;
+    }
+  } /* optional for spacing */
 </style>
 <div class="single-container">
   {{ $context := dict "page" . "level" 1 "isdateshown" false }} {{ partial

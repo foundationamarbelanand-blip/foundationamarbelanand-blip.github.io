@@ -43,7 +43,7 @@
     
   
   
-      <link href="/css/base.min.f39a89dd88e957c438503f7a952f269072acd71763ad106564eac1bf38b57fb9.css" rel="stylesheet" integrity="sha256-85qJ3YjpV8Q4UD96lS8mkHKs1xdjrRBlZOrBvzi1f7k=" crossorigin="anonymous">
+      <link href="/css/base.min.ef15ae378b76593cc41907446617035980428d20abd82cddb138df5c19ad103a.css" rel="stylesheet" integrity="sha256-7xWuN4t2WTzEGQdEZhcDWYBCjSCr2CzdsTjfXBmtEDo=" crossorigin="anonymous">
 
 
 
@@ -315,12 +315,23 @@
   .single-container {
     max-width: 1360px;
     margin: 0 auto;
+    width: 100%;
     margin-top: 30px;
     margin-bottom: 30px;
     padding: 40px;  
     background-color: #eff2f7;
     border-radius: 30px;
   }
+  @media (min-width: 768px) and (max-width: 1208px) {
+    .single-container {
+      padding: 20px;
+    }
+  }  
+  @media (max-width: 768px) {
+    .single-container {
+      padding: 20px;
+    }
+  }  
 </style>
 <div class="single-container">
    <header class="Heading">

@@ -31,7 +31,7 @@ h1,h2,h3,h4,h5,h6{
   color: #2F4057;
   
 }
-h1 { font-family: 'Jost', sans-serif; font-size: 36px; font-weight: 600; line-height: 1.2; margin-top: 5px; }
+h1 { font-family: 'Jost', sans-serif; font-size: clamp(25px, 3vw, 36px); font-weight: 600; line-height: 1.2; margin-top: 5px; }
 h2 { font-family: 'Jost', sans-serif; font-size: 30px; font-weight: 600; line-height: 1.3; margin-top: 5px; }
 h3 { font-family: 'Jost', sans-serif; font-size: 26px; font-weight: 600; line-height: 1.3; margin-top: 5px;}
 h4 { font-family: 'Jost', sans-serif; font-size: 22px; font-weight: 500; line-height: 1.4; margin-top: 5px;}
@@ -392,8 +392,10 @@ kbd:has(kbd) {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-  max-width: 1200px;
+  max-width: 1350px;
   margin: 0 auto;
+  width: 100%;
+  padding: 0px 40px 0px 40px;
 }
 
 /* Footer columns */
@@ -530,33 +532,6 @@ color: #282828;
 
 }
 
-.hero-content {
-  max-width: 800px;
-  padding: 20px;
-}
-
-.hero-title {
-  margin-bottom: 1rem;
-  color: #FFFFFF;
-}
-
-.hero-subtitle {
-  margin-bottom: 2rem;
-  color: #ccf;
-}
-
-.hero-button {
-  padding: 12px 30px;
-  background-color:#2F4057;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-.hero-button:hover {
-  background-color:#00EBA0;
-}
 
 /* Hero section styling */
 
@@ -961,10 +936,10 @@ padding: 30px 20px;;
       box-shadow: 0 6px 15px rgba(221, 36, 118, 0.4);
     }*/
     /* Support / Donate */
-    .donate-btn {
+    .donate-cola,.donate-btn {
       display: inline-block;
-      padding: 10px 18px;
-      background: linear-gradient(45deg, #36d1dc, #5b86e5);
+      padding: 5px 18px;
+      background: linear-gradient(90deg, #2F4057, #3F5C8A);
       color: #fff;
       border-radius: 8px;
       text-decoration: none;
@@ -974,7 +949,24 @@ padding: 30px 20px;;
     }
     .donate-btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 6px 15px rgba(54, 209, 220, 0.4);
+     box-shadow: 0 5px 15px #1FEDAB;
+    }
+
+    .donate-cola{
+      padding: 5px 18px;
+      background: linear-gradient(90deg, #2F4057, #3F5C8A);
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 28px;
+      float: right;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .donate-cola:hover{
+      transform: translateY(-3px);
+    box-shadow: 0 5px 15px #1FEDAB;
+
     }
 
     .thanks {
@@ -1063,17 +1055,21 @@ padding: 30px 20px;;
 .parent-link.active {
   color: #007bff;
 }
-
-ht-pag
 /* md file  */
-.single-container>ul ,.single-container>ol{
+.single-container > ul,
+.single-container > ol {
   margin: 10px 0px 10px 40px;
 }
-.single-container>ul>li,.single-container>ol>li{
+.single-container>ul>li,
+.single-container>ol>li{
   padding: 5px 0px;
 }
 .single-container>h5{
   margin-bottom: 5px;
+}
+.single-container>h5>.Heading-link{
+  margin-bottom: 5px;
+  text-align: left;
 }
 .single-container>p>a{
   color: #6E7C8C;
@@ -1086,13 +1082,14 @@ blockquote>p{
   font-weight: bold;
 }
 /* TAB Responsive Design */
-@media (min-width: 768px) and (max-width: 1208px){
+@media (min-width: 767px) and (max-width: 1208px){
   .activity-card{
-  width: 100%;
+  max-width: 100%;
+        width: 100%;
 }
   
 }
-@media (min-width: 768px) and (max-width: 1024px){
+@media (min-width: 767px) and (max-width: 1024px){
   .hero{
     height: 380px;
   }
@@ -1122,7 +1119,11 @@ blockquote>p{
        .owner-social {
         grid-template-columns: repeat(2, 1fr);
       }
-      
+      .footer-container{
+        padding: 0px 10px 0px 10px;
+        
+        
+      }
 
 }
 
@@ -1158,8 +1159,8 @@ blockquote>p{
       }
 
       .owner-photo img {
-        width: 180px;
-        height: 180px;
+        max-width: 100%;
+    width: 100%;
       }
       .owner-social {
         grid-template-columns: 1fr;
@@ -1174,7 +1175,6 @@ blockquote>p{
       .activity-card {
         flex-direction: column;
         text-align: center;
-        width: 100%;
       }
 
       .activity-image {
@@ -1201,21 +1201,34 @@ blockquote>p{
   padding: 60px 20px 30px 20px;
 
 }
+.collaboration-content{
+  flex-direction: column-reverse;
 
+}
+.single-container > ul,
+.single-container > ol {
+  margin: 10px 0px 10px 30px;
+}
+.Footer {
+  padding: 40px 0px 10px;
 
-      .footer-container {
-    flex-direction: column;
-    text-align:left;
-    gap: 30px;
+}
+
+.footer-container {
+  width: 100%;
+  flex-direction: column;
+  text-align:left;
+  gap: 30px;
+  padding: 0px 10px 0px 10px;
   }
-  .footer-column{
-    flex: 1 1 190px;
+.footer-column{
+    flex: 1 1 150px;
   }
 
-  .footer-column a,
-  .footer-column li,
-  .footer-column p {
-    display: block;
+.footer-column a,
+.footer-column li,
+.footer-column p {
+  display: block;
   }
 
     }
