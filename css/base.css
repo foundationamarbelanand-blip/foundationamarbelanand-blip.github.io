@@ -561,13 +561,12 @@ color: #282828;
   width: 150px;
   height: 2px;
   background: linear-gradient(90deg, transparent, #ffeea9, transparent);
-  margin: 0 auto 20px;
+  margin: 0 auto 0px;
   border-radius: 1px;
 }
 
 /* ===== AUTHOR TEXT ===== */
 .quote-banner span {
-  font-style: italic;
   color: #ffeea9;
   font-size: 1.2rem;
 }
@@ -601,7 +600,7 @@ color: #282828;
   }
 
   .quote-banner span {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -612,14 +611,14 @@ color: #282828;
     padding: 20px 10px;
   }
 .quote-banner{
-padding: 20px 20px;
+padding: 0px 20px;
 }
   .quote-banner img {
     width: 130px;
   }
 
   .quote-banner h2 {
-    font-size: 1.3rem;
+    font-size: 0.8rem;
   }
 
   .divider-line {
@@ -627,7 +626,7 @@ padding: 20px 20px;
   }
 
   .quote-banner span {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 
