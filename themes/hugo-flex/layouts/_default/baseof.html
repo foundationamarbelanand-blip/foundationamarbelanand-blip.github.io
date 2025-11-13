@@ -1,31 +1,24 @@
 <!DOCTYPE html>
 <html lang="{{ site.Language.LanguageCode }}">
+  <head>
+    {{ block "load_paginator" . }}{{ end }} {{ partial "meta.html" . }} {{
+    partial "title.html" . }} {{ partial "link.html" . }} {{ partial
+    "load_site_assets.html" . }} {{ block "load_page_assets" . }} {{ $noop :=
+    .Content }} {{ end }} {{ partial "assets.html" . }}
+  </head>
 
-<head>
-  {{ block "load_paginator" . }}{{ end }}
-  {{ partial "meta.html" . }}
-  {{ partial "title.html" . }}
-  {{ partial "link.html" . }}
-  {{ partial "load_site_assets.html" . }}
-  {{ block "load_page_assets" . }}
-    {{ $noop := .Content }}
-  {{ end }}
-  {{ partial "assets.html" . }}
-</head>
-
-<body>
-  {{ partialCached "banner.html" . .IsHome }}
-  <main>
-    <div class="u-wrapper">
-      <div class="u-padding">
-        {{ block "main" . }}{{ end }}
+  <body>
+    {{ partialCached "banner.html" . .IsHome }}
+    <main>
+      <div class="u-wrapper">
+        <div class="u-padding">{{ block "main" . }}{{ end }}</div>
       </div>
-    </div>
-  </main>
-  {{ partialCached "footer.html" . }}
-  {{ $js := resources.Get "js/main.js" | minify | fingerprint }}
-<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
-
-</body>
-
+    </main>
+    {{ partialCached "footer.html" . }} {{ $js := resources.Get "js/main.js" |
+    minify | fingerprint }}
+    <script
+      src="{{ $js.RelPermalink }}"
+      integrity="{{ $js.Data.Integrity }}"
+    ></script>
+  </body>
 </html>
