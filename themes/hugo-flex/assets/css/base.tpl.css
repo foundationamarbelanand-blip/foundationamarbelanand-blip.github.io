@@ -1,16 +1,27 @@
 @font-face {
-    font-family: 'Jost';
-    src: url('/fonts/Jost-VariableFont_wght.woff2') format('woff2');
-    font-weight: 100 900;
-    font-style: normal;
+  font-family: 'Jost';
+  src: url('/fonts/Jost-VariableFont_wght.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap; /* ensures text shows immediately */
+  ascent-override: 90%; /* fine-tune font metrics */
+  descent-override: 22%;
+  line-gap-override: 0%;
+  size-adjust: 100%;
 }
 
 @font-face {
-    font-family: 'Jost';
-    src: url('/fonts/Jost-Italic-VariableFont_wght.woff2') format('woff2');
-    font-weight: 100 900;
-    font-style: italic;
+  font-family: 'Jost';
+  src: url('/fonts/Jost-Italic-VariableFont_wght.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap; /* or optional for performance-first */
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+  size-adjust: 100%;
 }
+
 
 * {
   box-sizing: border-box;
