@@ -1,4 +1,5 @@
 baseURL = "https://foundationamarbelanand-blip.github.io"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Amarbelanand Foundation"
 theme = "hugo-flex"
+

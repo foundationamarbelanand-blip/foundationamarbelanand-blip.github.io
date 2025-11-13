@@ -1120,7 +1120,7 @@ padding: 30px 20px;;
 }
 
 .mobile-item a:hover {
-  color: #007bff;
+  color: #1FEDAB;
 }
 
 .mobile-submenu {
@@ -1319,6 +1319,10 @@ max-width: 100%;      /* keeps aspect ratio */
   flex-direction: column-reverse;
 
 }
+.social-col {
+      padding: 20px 0px;
+      
+    }
 .single-container > ul,
 .single-container > ol {
   margin: 10px 0px 10px 30px;

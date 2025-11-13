@@ -1,5 +1,5 @@
 baseURL: https://example.org/
-title: My New Hugo Site
+title: Amarbelanand Foundation
 languageCode: en-US
 theme: hugo-flex
 
@@ -11,6 +11,7 @@ taxonomies:
   tag: "tags"
 
 params:
+  description: "Amarbelanand Foundation — Serving Humanity, Guided by the Supreme. Awakening souls through divine vibration, selfless service, and universal compassion."
   color: "#FFFFFF" # Any color in CSS syntax
   width: 42rem # Any length in CSS syntax / leave empty to span page
   divider: \2500\2500 # Any string in CSS syntax / leave empty for no divider
