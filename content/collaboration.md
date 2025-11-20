@@ -28,8 +28,6 @@ Thank you
 
 ##### **Contact us:**
 
-Amarbelanand Foundation  
-C/o- At Amtyapur, Dist.: Satara, Matyapur,  
-Gove, Satara, Satara- 415015,  
-Maharashtra, India  
-**Email:** amarbelanandfoundation@gmail.com
+Amarbelanand Foundation
+
+**Email:** contact@amarbelanandfoundation.org
